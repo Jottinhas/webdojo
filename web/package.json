@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "serve -s dist -p 3000",
-    "test": "npx cypress run",
-    "test"
+    "test": "npx cypress run --config viewportWidth=1440,viewportHeight=900",
+    "test:ui": "npx cypress open",
+    "test:login": "npx cypress run --spec cypress/e2e/login.cy.js --config view",
+    "test:login:mobile": "npx cypress run --spec cypress/e2e/login.cy.js --cont"  
   },
   "dependencies": {
     "cypress-real-events": "^1.15.0",
